@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     {
         GameObject zoomSlider = Instantiate(zoomSliderPrefab);
         zoomSlider.transform.SetParent(canvas, false);
-
+        
         //RectTransform zoomSliderTransform = zoomSlider.GetComponent<RectTransform>();
     }
 

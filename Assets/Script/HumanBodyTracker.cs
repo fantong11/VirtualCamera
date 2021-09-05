@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine.XR.ARSubsystems;
+
 namespace UnityEngine.XR.ARFoundation.Samples
 {
     public class HumanBodyTracker : MonoBehaviour
@@ -34,24 +35,91 @@ namespace UnityEngine.XR.ARFoundation.Samples
         Dictionary<TrackableId, BoneController> m_SkeletonTracker = new Dictionary<TrackableId, BoneController>();
 
         private AvatarManager avatarManager;
+
         private BoneController boneController;
-        private float estimateHeightScaleFactor = 1.0f;
+
+        private float estimatedHeightScaleFactor = 1.0f;
 
         private void Start()
         {
-            avatarManager = GetComponent<AvatarManager>();   
+            avatarManager = GetComponent<AvatarManager>();
         }
+
+        void OnEnable()
+        {
+            Debug.Assert(m_HumanBodyManager != null, "Human body manager is required.");
+            m_HumanBodyManager.humanBodiesChanged += OnHumanBodiesChanged;
+
+            humanBodyManager.pose3DScaleEstimationRequested = true;
+        }
+
+        void OnDisable()
+        {
+            if (m_HumanBodyManager != null)
+            {
+                m_HumanBodyManager.humanBodiesChanged -= OnHumanBodiesChanged;
+                humanBodyManager.pose3DScaleEstimationRequested = true;
+            }
+        }
+
+        void OnHumanBodiesChanged(ARHumanBodiesChangedEventArgs eventArgs)
+        {
+            foreach (var humanBody in eventArgs.added)
+            {
+                if (!m_SkeletonTracker.TryGetValue(humanBody.trackableId, out boneController))
+                {
+                    Debug.Log($"Adding a new skeleton [{humanBody.trackableId}].");
+
+                    var newSkeletonGO = Instantiate(m_SkeletonPrefab, humanBody.transform);
+                    boneController = newSkeletonGO.GetComponent<BoneController>();
+                    m_SkeletonTracker.Add(humanBody.trackableId, boneController);
+                }
+
+                boneController.InitializeSkeletonJoints();
+
+                avatarManager.InitRobotPose(boneController.transform, humanBody.transform.localPosition, humanBody.transform.localRotation, boneController.robotBoneMapping);
+
+                boneController.ApplyBodyPose(humanBody);
+            }
+
+            foreach (var humanBody in eventArgs.updated)
+            {
+                if (m_SkeletonTracker.TryGetValue(humanBody.trackableId, out boneController))
+                {
+                    boneController.ApplyBodyPose(humanBody);
+                    if (humanBody.estimatedHeightScaleFactor != estimatedHeightScaleFactor)
+                    {
+                        estimatedHeightScaleFactor = humanBody.estimatedHeightScaleFactor;
+                        boneController.transform.localScale = new Vector3(humanBody.estimatedHeightScaleFactor, humanBody.estimatedHeightScaleFactor, humanBody.estimatedHeightScaleFactor);
+                    }
+
+                    avatarManager.UpdateRobotPose(humanBody.transform.localPosition, humanBody.transform.localRotation, humanBody.estimatedHeightScaleFactor);
+                }
+            }
+
+            foreach (var humanBody in eventArgs.removed)
+            {
+                Debug.Log($"Removing a skeleton [{humanBody.trackableId}].");
+                if (m_SkeletonTracker.TryGetValue(humanBody.trackableId, out boneController))
+                {
+                    Destroy(boneController.gameObject);
+                    m_SkeletonTracker.Remove(humanBody.trackableId);
+                }
+            }
+        }
+
+
 
         public void TestHumanBodyAdded(float randomHeight, Vector3 robotInitialPosition)
         {
-            var newSkeleton = Instantiate(m_SkeletonPrefab);
-            boneController = newSkeleton.GetComponent<BoneController>();
+            var newSkeletonGO = Instantiate(m_SkeletonPrefab);
+            boneController = newSkeletonGO.GetComponent<BoneController>();
             boneController.InitializeSkeletonJoints();
 
             boneController.transform.localPosition = robotInitialPosition;
 
-            estimateHeightScaleFactor = randomHeight;
-            newSkeleton.transform.localScale = new Vector3(estimateHeightScaleFactor, estimateHeightScaleFactor, estimateHeightScaleFactor);
+            estimatedHeightScaleFactor = randomHeight;
+            newSkeletonGO.transform.localScale = new Vector3(estimatedHeightScaleFactor, estimatedHeightScaleFactor, estimatedHeightScaleFactor);
 
             avatarManager.InitRobotPose(
                 boneController.transform,
@@ -60,9 +128,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 boneController.robotBoneMapping);
         }
 
-        internal void TestHumanBodyMoved(Vector3 rndPos, Quaternion rndRot, Vector3 rndJointPos, Quaternion rndJointRot)
+        public void TestHumanBodyMoved(Vector3 randomPosition, Quaternion randomRotation, Vector3 randomJointPosition, Quaternion randomJointRotation)
         {
-            throw new NotImplementedException();
+            boneController.transform.localPosition += randomPosition;
+            boneController.transform.localRotation *= randomRotation;
+
+            boneController.TestApplyBodyPose(randomJointRotation);
+
+            avatarManager.UpdateRobotPose(boneController.transform.localPosition, boneController.transform.localRotation, estimatedHeightScaleFactor);
         }
     }
 }

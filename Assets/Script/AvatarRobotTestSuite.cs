@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation.Samples;
-using Random = UnityEngine.Random;
 
 public class AvatarRobotTestSuite : MonoBehaviour
 {
@@ -54,15 +52,16 @@ public class AvatarRobotTestSuite : MonoBehaviour
     private HumanBodyTracker humanBodyTracker;
 
     public bool isTesting;
-    // Start is called before the first frame update
+
     void Start()
     {
         humanBodyTracker = GetComponent<HumanBodyTracker>();
-    }
 
+    }
     public IEnumerator TestPositionUpdate()
     {
         yield return new WaitForSeconds(testTimeBetweenUpdates);
+
         var randomHeight = Random.Range(minRandomHeight, maxRandomHeight);
         humanBodyTracker.TestHumanBodyAdded(randomHeight, robotInitialPosition);
 

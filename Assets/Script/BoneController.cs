@@ -48,6 +48,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 {
                     nodes.Enqueue(next.GetChild(i));
                 }
+                // 把dequeue出來的node加進map
                 ProcessJoint(next);
             }
         }

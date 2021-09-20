@@ -112,8 +112,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         public void TestHumanBodyAdded(float randomHeight, Vector3 robotInitialPosition)
         {
+            // 生成機器人
             var newSkeletonGO = Instantiate(m_SkeletonPrefab);
             boneController = newSkeletonGO.GetComponent<BoneController>();
+            // 把joint存入map
             boneController.InitializeSkeletonJoints();
 
             boneController.transform.localPosition = robotInitialPosition;

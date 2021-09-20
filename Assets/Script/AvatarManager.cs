@@ -20,6 +20,9 @@ public class AvatarManager : MonoBehaviour
     [Tooltip("Default rotation offset from the controlled robot")]
     private Vector3 avatarRotationOffset;
 
+    [SerializeField]
+    private Vector3 avatarTestPositionOffset = new Vector3(2, 0, -2);
+
     private HumanBoneMap humanBoneMap = new HumanBoneMap();
 
     private AvatarRobotBoneMap avatarRobotBoneMap;
@@ -37,6 +40,8 @@ public class AvatarManager : MonoBehaviour
     private ARHumanBodyManager arHumanBodyManager;
 
     private bool isBodyTracking = false;
+
+    
 
     private void Start()
     {
@@ -84,7 +89,7 @@ public class AvatarManager : MonoBehaviour
         controlledRobot = robot;
         controlledRobotRenderer = controlledRobot.gameObject.GetComponentInChildren<Renderer>();
 
-        humanBoneMap.robotLocalPosition = initialPosition;
+        humanBoneMap.robotLocalPosition = initialPosition + avatarTestPositionOffset;
         humanBoneMap.robotLocalRotation = initialRotation;
         avatarParent.transform.localScale = humanBoneMap.robotLocalScale;
 
@@ -92,6 +97,7 @@ public class AvatarManager : MonoBehaviour
         {
             var jointIndex = (JointIndices)i;
 
+            // 如果角色沒有joint的時候 跳過檢查下一個
             if (!humanBoneMap.BoneMaps.ContainsKey(jointIndex)) continue;
 
             var robotBone = robotBoneMapping[jointIndex];
@@ -107,7 +113,7 @@ public class AvatarManager : MonoBehaviour
 
     public void UpdateRobotPose(Vector3 localPosition, Quaternion localRotation, float estimatedHeight)
     {
-        humanBoneMap.robotLocalPosition = localPosition;
+        humanBoneMap.robotLocalPosition = localPosition + avatarTestPositionOffset;
         humanBoneMap.robotLocalRotation = localRotation;
 
         if (humanBoneMap.robotEstimatedHeight != estimatedHeight)
@@ -142,6 +148,7 @@ public class AvatarManager : MonoBehaviour
     }
     public void StartTest()
     {
+        // 關掉tracking
         isBodyTracking = false;
         arHumanBodyManager.SetTrackablesActive(isBodyTracking);
         arHumanBodyManager.enabled = isBodyTracking;

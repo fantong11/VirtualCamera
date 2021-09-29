@@ -145,6 +145,7 @@ public class AvatarManager : MonoBehaviour
         isBodyTracking = !isBodyTracking;
         arHumanBodyManager.SetTrackablesActive(isBodyTracking);
         arHumanBodyManager.enabled = isBodyTracking;
+        //OverlayAvatar();
     }
     public void StartTest()
     {

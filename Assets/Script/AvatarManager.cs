@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation.Samples;
 
 public class AvatarManager : MonoBehaviour
@@ -9,7 +10,7 @@ public class AvatarManager : MonoBehaviour
     [SerializeField]
     [Tooltip("Empty Gameobject with the Avatar armature inside")]
     private GameObject avatarParent;
-
+ 
     private Transform avatar;
 
     [SerializeField]
@@ -40,11 +41,12 @@ public class AvatarManager : MonoBehaviour
     private ARHumanBodyManager arHumanBodyManager;
 
     private bool isBodyTracking = false;
-
     
 
     private void Start()
     {
+        Transform avatarPrefab = Instantiate(StaticClass.avatar, new Vector3(0, -1, 3), Quaternion.Euler(new Vector3(0, 180, 0)));
+        avatarPrefab.SetParent(avatarParent.transform);
         avatarRobotTestSuite = GetComponent<AvatarRobotTestSuite>();
         arHumanBodyManager = FindObjectOfType<ARHumanBodyManager>();
 
@@ -175,6 +177,11 @@ public class AvatarManager : MonoBehaviour
                 avatarParent.transform.position = rootBoneMap.robotBone.position;
             }
         }
+    }
+
+    public void ChangeAvatar()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void DebugVector3ToString(string name, Vector3 vector3)

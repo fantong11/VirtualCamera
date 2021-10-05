@@ -326,6 +326,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -716,6 +717,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -812,6 +814,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -972,6 +975,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1570,6 +1574,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1696,6 +1701,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1797,6 +1803,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2081,6 +2088,7 @@ GameObject:
   - component: {fileID: 11400002}
   - component: {fileID: 11400000}
   - component: {fileID: 11400004}
+  - component: {fileID: -7421403873189035753}
   m_Layer: 0
   m_Name: unitychan
   m_TagString: Untagged
@@ -2192,6 +2200,291 @@ MonoBehaviour:
   timeBlink: 0.4
   threshold: 0.3
   interval: 3
+--- !u!114 &-7421403873189035753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5133fee89a4c20540b7a3055bf9fa9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Root:
+    jointIndex: 0
+    avatarBone: {fileID: 400322}
+  Hips:
+    jointIndex: 1
+    avatarBone: {fileID: 400200}
+  LeftUpLeg:
+    jointIndex: 2
+    avatarBone: {fileID: 400162}
+  LeftLeg:
+    jointIndex: 3
+    avatarBone: {fileID: 400058}
+  LeftFoot:
+    jointIndex: 4
+    avatarBone: {fileID: 400068}
+  LeftToes:
+    jointIndex: 5
+    avatarBone: {fileID: 400110}
+  LeftToesEnd:
+    jointIndex: 6
+    avatarBone: {fileID: 0}
+  RightUpLeg:
+    jointIndex: 7
+    avatarBone: {fileID: 400310}
+  RightLeg:
+    jointIndex: 8
+    avatarBone: {fileID: 400042}
+  RightFoot:
+    jointIndex: 9
+    avatarBone: {fileID: 400004}
+  RightToes:
+    jointIndex: 10
+    avatarBone: {fileID: 400004}
+  RightToesEnd:
+    jointIndex: 11
+    avatarBone: {fileID: 0}
+  Spine1:
+    jointIndex: 12
+    avatarBone: {fileID: 400104}
+  Spine2:
+    jointIndex: 13
+    avatarBone: {fileID: 400220}
+  Spine3:
+    jointIndex: 14
+    avatarBone: {fileID: 400308}
+  Spine4:
+    jointIndex: 15
+    avatarBone: {fileID: 0}
+  Spine5:
+    jointIndex: 16
+    avatarBone: {fileID: 0}
+  Spine6:
+    jointIndex: 17
+    avatarBone: {fileID: 0}
+  Spine7:
+    jointIndex: 18
+    avatarBone: {fileID: 0}
+  LeftShoulder1:
+    jointIndex: 19
+    avatarBone: {fileID: 400260}
+  LeftArm:
+    jointIndex: 20
+    avatarBone: {fileID: 400230}
+  LeftForearm:
+    jointIndex: 21
+    avatarBone: {fileID: 400224}
+  LeftHand:
+    jointIndex: 22
+    avatarBone: {fileID: 400002}
+  LeftHandIndexStart:
+    jointIndex: 23
+    avatarBone: {fileID: 400062}
+  LeftHandIndex1:
+    jointIndex: 24
+    avatarBone: {fileID: 400332}
+  LeftHandIndex2:
+    jointIndex: 25
+    avatarBone: {fileID: 400046}
+  LeftHandIndex3:
+    jointIndex: 26
+    avatarBone: {fileID: 400006}
+  LeftHandIndexEnd:
+    jointIndex: 27
+    avatarBone: {fileID: 0}
+  LeftHandMidStart:
+    jointIndex: 28
+    avatarBone: {fileID: 400316}
+  LeftHandMid1:
+    jointIndex: 29
+    avatarBone: {fileID: 400198}
+  LeftHandMid2:
+    jointIndex: 30
+    avatarBone: {fileID: 400302}
+  LeftHandMid3:
+    jointIndex: 31
+    avatarBone: {fileID: 400228}
+  LeftHandMidEnd:
+    jointIndex: 32
+    avatarBone: {fileID: 0}
+  LeftHandPinkyStart:
+    jointIndex: 33
+    avatarBone: {fileID: 400248}
+  LeftHandPinky1:
+    jointIndex: 34
+    avatarBone: {fileID: 400170}
+  LeftHandPinky2:
+    jointIndex: 35
+    avatarBone: {fileID: 400258}
+  LeftHandPinky3:
+    jointIndex: 36
+    avatarBone: {fileID: 400298}
+  LeftHandPinkyEnd:
+    jointIndex: 37
+    avatarBone: {fileID: 0}
+  LeftHandRingStart:
+    jointIndex: 38
+    avatarBone: {fileID: 400218}
+  LeftHandRing1:
+    jointIndex: 39
+    avatarBone: {fileID: 400234}
+  LeftHandRing2:
+    jointIndex: 40
+    avatarBone: {fileID: 400192}
+  LeftHandRing3:
+    jointIndex: 41
+    avatarBone: {fileID: 400128}
+  LeftHandRingEnd:
+    jointIndex: 42
+    avatarBone: {fileID: 0}
+  LeftHandThumbStart:
+    jointIndex: 43
+    avatarBone: {fileID: 400152}
+  LeftHandThumb1:
+    jointIndex: 44
+    avatarBone: {fileID: 400098}
+  LeftHandThumb2:
+    jointIndex: 45
+    avatarBone: {fileID: 400086}
+  LeftHandThumbEnd:
+    jointIndex: 46
+    avatarBone: {fileID: 400012}
+  Neck1:
+    jointIndex: 47
+    avatarBone: {fileID: 400262}
+  Neck2:
+    jointIndex: 48
+    avatarBone: {fileID: 0}
+  Neck3:
+    jointIndex: 49
+    avatarBone: {fileID: 0}
+  Neck4:
+    jointIndex: 50
+    avatarBone: {fileID: 0}
+  Head:
+    jointIndex: 51
+    avatarBone: {fileID: 400022}
+  Jaw:
+    jointIndex: 52
+    avatarBone: {fileID: 0}
+  Chin:
+    jointIndex: 53
+    avatarBone: {fileID: 0}
+  LeftEye:
+    jointIndex: 54
+    avatarBone: {fileID: 0}
+  LeftEyeLowerLid:
+    jointIndex: 55
+    avatarBone: {fileID: 0}
+  LeftEyeUpperLid:
+    jointIndex: 56
+    avatarBone: {fileID: 0}
+  LeftEyeball:
+    jointIndex: 57
+    avatarBone: {fileID: 0}
+  Nose:
+    jointIndex: 58
+    avatarBone: {fileID: 0}
+  RightEye:
+    jointIndex: 59
+    avatarBone: {fileID: 0}
+  RightEyeLowerLid:
+    jointIndex: 60
+    avatarBone: {fileID: 0}
+  RightEyeUpperLid:
+    jointIndex: 61
+    avatarBone: {fileID: 0}
+  RightEyeball:
+    jointIndex: 62
+    avatarBone: {fileID: 0}
+  RightShoulder1:
+    jointIndex: 63
+    avatarBone: {fileID: 400282}
+  RightArm:
+    jointIndex: 64
+    avatarBone: {fileID: 400214}
+  RightForearm:
+    jointIndex: 65
+    avatarBone: {fileID: 400186}
+  RightHand:
+    jointIndex: 66
+    avatarBone: {fileID: 400178}
+  RightHandIndexStar:
+    jointIndex: 67
+    avatarBone: {fileID: 400240}
+  RightHandIndex1:
+    jointIndex: 68
+    avatarBone: {fileID: 400048}
+  RightHandIndex2:
+    jointIndex: 69
+    avatarBone: {fileID: 400026}
+  RightHandIndex3:
+    jointIndex: 70
+    avatarBone: {fileID: 400090}
+  RightHandIndexEnd:
+    jointIndex: 71
+    avatarBone: {fileID: 0}
+  RightHandMidStart:
+    jointIndex: 72
+    avatarBone: {fileID: 400146}
+  RightHandMid1:
+    jointIndex: 73
+    avatarBone: {fileID: 400304}
+  RightHandMid2:
+    jointIndex: 74
+    avatarBone: {fileID: 400084}
+  RightHandMid3:
+    jointIndex: 75
+    avatarBone: {fileID: 400222}
+  RightHandMidEnd:
+    jointIndex: 76
+    avatarBone: {fileID: 0}
+  RightHandPinkyStar:
+    jointIndex: 77
+    avatarBone: {fileID: 400020}
+  RightHandPinky1:
+    jointIndex: 78
+    avatarBone: {fileID: 400014}
+  RightHandPinky2:
+    jointIndex: 79
+    avatarBone: {fileID: 400294}
+  RightHandPinky3:
+    jointIndex: 80
+    avatarBone: {fileID: 400194}
+  RightHandPinkyEnd:
+    jointIndex: 81
+    avatarBone: {fileID: 0}
+  RightHandRingStart:
+    jointIndex: 82
+    avatarBone: {fileID: 400102}
+  RightHandRing1:
+    jointIndex: 83
+    avatarBone: {fileID: 400010}
+  RightHandRing2:
+    jointIndex: 84
+    avatarBone: {fileID: 400324}
+  RightHandRing3:
+    jointIndex: 85
+    avatarBone: {fileID: 400106}
+  RightHandRingEnd:
+    jointIndex: 86
+    avatarBone: {fileID: 0}
+  RightHandThumbStar:
+    jointIndex: 87
+    avatarBone: {fileID: 400164}
+  RightHandThumb1:
+    jointIndex: 88
+    avatarBone: {fileID: 400204}
+  RightHandThumb2:
+    jointIndex: 89
+    avatarBone: {fileID: 400252}
+  RightHandThumbEnd:
+    jointIndex: 90
+    avatarBone: {fileID: 400116}
 --- !u!1 &100098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2563,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2544,6 +2838,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2793,6 +3088,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3103,6 +3399,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3288,6 +3585,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3437,6 +3735,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3621,6 +3920,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3746,6 +4046,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4503,6 +4804,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4671,6 +4973,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4695,6 +4998,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &100208
 GameObject:
   m_ObjectHideFlags: 0
@@ -5300,6 +5604,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5460,6 +5765,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5484,6 +5790,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &100252
 GameObject:
   m_ObjectHideFlags: 0
@@ -6055,6 +6362,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6200,6 +6508,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6224,6 +6533,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &100292
 GameObject:
   m_ObjectHideFlags: 0
@@ -6590,6 +6900,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6614,6 +6925,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &100314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6906,6 +7218,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

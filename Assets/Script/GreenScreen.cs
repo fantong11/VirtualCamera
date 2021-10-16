@@ -6,6 +6,9 @@ using UnityEngine.XR.ARFoundation;
 public class GreenScreen : MonoBehaviour
 {
     [SerializeField]
+    private Transform toggleGreenBg;
+
+    [SerializeField]
     private Material green;
     
     [SerializeField]

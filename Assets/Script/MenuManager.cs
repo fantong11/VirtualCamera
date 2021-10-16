@@ -23,13 +23,13 @@ public class MenuManager : MonoBehaviour
 
     public void getStartKumasen()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("VirtualCamera");
         StaticClass.avatar = kumasen;
     }
 
     public void getStartUnityChan()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("VirtualCamera");
         StaticClass.avatar = unityChan;
     }
 }

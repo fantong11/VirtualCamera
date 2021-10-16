@@ -10055,9 +10055,9 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+    m_Center: {x: 0.00022907555, y: 1.4618996, z: -0.012705162}
+    m_Extent: {x: 0.0976239, y: 0.12140584, z: 0.10591002}
+  m_DirtyAABB: 0
 --- !u!1 &2546620387336684148
 GameObject:
   m_ObjectHideFlags: 0
@@ -16116,6 +16116,7 @@ GameObject:
   - component: {fileID: 9108513968947998982}
   - component: {fileID: 4806496436524284254}
   - component: {fileID: 3087013741217618192}
+  - component: {fileID: -6947797918611197233}
   m_Layer: 0
   m_Name: Kumasen_Bete
   m_TagString: Untagged
@@ -17166,6 +17167,291 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423fb0cccbe420047ac28163cce68db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6947797918611197233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333981626663287828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5133fee89a4c20540b7a3055bf9fa9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Root:
+    jointIndex: 0
+    avatarBone: {fileID: 4688604868524313995}
+  Hips:
+    jointIndex: 1
+    avatarBone: {fileID: 7657731769607249465}
+  LeftUpLeg:
+    jointIndex: 2
+    avatarBone: {fileID: 5501619282114254294}
+  LeftLeg:
+    jointIndex: 3
+    avatarBone: {fileID: 1546217767903037162}
+  LeftFoot:
+    jointIndex: 4
+    avatarBone: {fileID: 6886875444934341944}
+  LeftToes:
+    jointIndex: 5
+    avatarBone: {fileID: 2333867342919314195}
+  LeftToesEnd:
+    jointIndex: 6
+    avatarBone: {fileID: 0}
+  RightUpLeg:
+    jointIndex: 7
+    avatarBone: {fileID: 3210289644445700847}
+  RightLeg:
+    jointIndex: 8
+    avatarBone: {fileID: 8229509240344952359}
+  RightFoot:
+    jointIndex: 9
+    avatarBone: {fileID: 1681414764112865779}
+  RightToes:
+    jointIndex: 10
+    avatarBone: {fileID: 1185213589071894943}
+  RightToesEnd:
+    jointIndex: 11
+    avatarBone: {fileID: 0}
+  Spine1:
+    jointIndex: 12
+    avatarBone: {fileID: 3769003870675316852}
+  Spine2:
+    jointIndex: 13
+    avatarBone: {fileID: 0}
+  Spine3:
+    jointIndex: 14
+    avatarBone: {fileID: 0}
+  Spine4:
+    jointIndex: 15
+    avatarBone: {fileID: 0}
+  Spine5:
+    jointIndex: 16
+    avatarBone: {fileID: 0}
+  Spine6:
+    jointIndex: 17
+    avatarBone: {fileID: 0}
+  Spine7:
+    jointIndex: 18
+    avatarBone: {fileID: 0}
+  LeftShoulder1:
+    jointIndex: 19
+    avatarBone: {fileID: 7137444177787344155}
+  LeftArm:
+    jointIndex: 20
+    avatarBone: {fileID: 1718330765680885182}
+  LeftForearm:
+    jointIndex: 21
+    avatarBone: {fileID: 3312760253229320553}
+  LeftHand:
+    jointIndex: 22
+    avatarBone: {fileID: 8091897171424928032}
+  LeftHandIndexStart:
+    jointIndex: 23
+    avatarBone: {fileID: 0}
+  LeftHandIndex1:
+    jointIndex: 24
+    avatarBone: {fileID: 0}
+  LeftHandIndex2:
+    jointIndex: 25
+    avatarBone: {fileID: 0}
+  LeftHandIndex3:
+    jointIndex: 26
+    avatarBone: {fileID: 0}
+  LeftHandIndexEnd:
+    jointIndex: 27
+    avatarBone: {fileID: 0}
+  LeftHandMidStart:
+    jointIndex: 28
+    avatarBone: {fileID: 5978464877406054103}
+  LeftHandMid1:
+    jointIndex: 29
+    avatarBone: {fileID: 1304772512260323724}
+  LeftHandMid2:
+    jointIndex: 30
+    avatarBone: {fileID: 6965898634616861071}
+  LeftHandMid3:
+    jointIndex: 31
+    avatarBone: {fileID: 0}
+  LeftHandMidEnd:
+    jointIndex: 32
+    avatarBone: {fileID: 0}
+  LeftHandPinkyStart:
+    jointIndex: 33
+    avatarBone: {fileID: 3209074135183608594}
+  LeftHandPinky1:
+    jointIndex: 34
+    avatarBone: {fileID: 7070175985018131706}
+  LeftHandPinky2:
+    jointIndex: 35
+    avatarBone: {fileID: 7825770509045814660}
+  LeftHandPinky3:
+    jointIndex: 36
+    avatarBone: {fileID: 0}
+  LeftHandPinkyEnd:
+    jointIndex: 37
+    avatarBone: {fileID: 0}
+  LeftHandRingStart:
+    jointIndex: 38
+    avatarBone: {fileID: 2005911210851421804}
+  LeftHandRing1:
+    jointIndex: 39
+    avatarBone: {fileID: 6259324821077885746}
+  LeftHandRing2:
+    jointIndex: 40
+    avatarBone: {fileID: 8719442676916067970}
+  LeftHandRing3:
+    jointIndex: 41
+    avatarBone: {fileID: 0}
+  LeftHandRingEnd:
+    jointIndex: 42
+    avatarBone: {fileID: 0}
+  LeftHandThumbStart:
+    jointIndex: 43
+    avatarBone: {fileID: 5644708163767777529}
+  LeftHandThumb1:
+    jointIndex: 44
+    avatarBone: {fileID: 388472171673071917}
+  LeftHandThumb2:
+    jointIndex: 45
+    avatarBone: {fileID: 2318978199036873594}
+  LeftHandThumbEnd:
+    jointIndex: 46
+    avatarBone: {fileID: 0}
+  Neck1:
+    jointIndex: 47
+    avatarBone: {fileID: 5212478471337053377}
+  Neck2:
+    jointIndex: 48
+    avatarBone: {fileID: 0}
+  Neck3:
+    jointIndex: 49
+    avatarBone: {fileID: 0}
+  Neck4:
+    jointIndex: 50
+    avatarBone: {fileID: 0}
+  Head:
+    jointIndex: 51
+    avatarBone: {fileID: 7463220318345866248}
+  Jaw:
+    jointIndex: 52
+    avatarBone: {fileID: 0}
+  Chin:
+    jointIndex: 53
+    avatarBone: {fileID: 0}
+  LeftEye:
+    jointIndex: 54
+    avatarBone: {fileID: 0}
+  LeftEyeLowerLid:
+    jointIndex: 55
+    avatarBone: {fileID: 0}
+  LeftEyeUpperLid:
+    jointIndex: 56
+    avatarBone: {fileID: 0}
+  LeftEyeball:
+    jointIndex: 57
+    avatarBone: {fileID: 0}
+  Nose:
+    jointIndex: 58
+    avatarBone: {fileID: 0}
+  RightEye:
+    jointIndex: 59
+    avatarBone: {fileID: 0}
+  RightEyeLowerLid:
+    jointIndex: 60
+    avatarBone: {fileID: 0}
+  RightEyeUpperLid:
+    jointIndex: 61
+    avatarBone: {fileID: 0}
+  RightEyeball:
+    jointIndex: 62
+    avatarBone: {fileID: 0}
+  RightShoulder1:
+    jointIndex: 63
+    avatarBone: {fileID: 1131788020265316646}
+  RightArm:
+    jointIndex: 64
+    avatarBone: {fileID: 143119644252709962}
+  RightForearm:
+    jointIndex: 65
+    avatarBone: {fileID: 306149463470794752}
+  RightHand:
+    jointIndex: 66
+    avatarBone: {fileID: 3094612615371662616}
+  RightHandIndexStar:
+    jointIndex: 67
+    avatarBone: {fileID: 0}
+  RightHandIndex1:
+    jointIndex: 68
+    avatarBone: {fileID: 0}
+  RightHandIndex2:
+    jointIndex: 69
+    avatarBone: {fileID: 0}
+  RightHandIndex3:
+    jointIndex: 70
+    avatarBone: {fileID: 0}
+  RightHandIndexEnd:
+    jointIndex: 71
+    avatarBone: {fileID: 0}
+  RightHandMidStart:
+    jointIndex: 72
+    avatarBone: {fileID: 1213776013980094805}
+  RightHandMid1:
+    jointIndex: 73
+    avatarBone: {fileID: 2435102943027656005}
+  RightHandMid2:
+    jointIndex: 74
+    avatarBone: {fileID: 7324839300235610445}
+  RightHandMid3:
+    jointIndex: 75
+    avatarBone: {fileID: 0}
+  RightHandMidEnd:
+    jointIndex: 76
+    avatarBone: {fileID: 0}
+  RightHandPinkyStar:
+    jointIndex: 77
+    avatarBone: {fileID: 2400506276795665143}
+  RightHandPinky1:
+    jointIndex: 78
+    avatarBone: {fileID: 5101562499978681893}
+  RightHandPinky2:
+    jointIndex: 79
+    avatarBone: {fileID: 510444380621654189}
+  RightHandPinky3:
+    jointIndex: 80
+    avatarBone: {fileID: 0}
+  RightHandPinkyEnd:
+    jointIndex: 81
+    avatarBone: {fileID: 0}
+  RightHandRingStart:
+    jointIndex: 82
+    avatarBone: {fileID: 8793652600740161081}
+  RightHandRing1:
+    jointIndex: 83
+    avatarBone: {fileID: 3994837640348238843}
+  RightHandRing2:
+    jointIndex: 84
+    avatarBone: {fileID: 98612822018250036}
+  RightHandRing3:
+    jointIndex: 85
+    avatarBone: {fileID: 0}
+  RightHandRingEnd:
+    jointIndex: 86
+    avatarBone: {fileID: 0}
+  RightHandThumbStar:
+    jointIndex: 87
+    avatarBone: {fileID: 8824998820989898593}
+  RightHandThumb1:
+    jointIndex: 88
+    avatarBone: {fileID: 8042778765839834832}
+  RightHandThumb2:
+    jointIndex: 89
+    avatarBone: {fileID: 4502838639379174282}
+  RightHandThumbEnd:
+    jointIndex: 90
+    avatarBone: {fileID: 0}
 --- !u!1 &4355700340710520456
 GameObject:
   m_ObjectHideFlags: 0
@@ -26911,9 +27197,9 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+    m_Center: {x: 0.00022923946, y: 0.783089, z: -0.0060477704}
+    m_Extent: {x: 0.69199884, y: 0.79754454, z: 0.144182}
+  m_DirtyAABB: 0
 --- !u!1 &7111231439478204891
 GameObject:
   m_ObjectHideFlags: 0

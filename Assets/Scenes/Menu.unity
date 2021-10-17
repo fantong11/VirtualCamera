@@ -535,7 +535,7 @@ Camera:
   m_GameObject: {fileID: 581372100}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679507342}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc1243f9161914f4fa20f27ea4324edd, type: 3}
   m_Name: 
@@ -1256,6 +1256,7 @@ MonoBehaviour:
   unityChan: {fileID: 1044539122820057846, guid: 78651d53b1cdb43e89da06543acc8982,
     type: 3}
   kumasen: {fileID: 1762763380470433103, guid: d377469d283224634a474377b5ed22cc, type: 3}
+  toggleGreenBg: {fileID: 266192271}
 --- !u!4 &2139885224
 Transform:
   m_ObjectHideFlags: 0

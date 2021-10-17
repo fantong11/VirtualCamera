@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VirtualCamera.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/VirtualCameraWithGreenBackground.unity
+    guid: 088a3f3fac75946249354a67e42ef218
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e9d24e1838ac741b8a84607aaee7eeb0,
       type: 2}

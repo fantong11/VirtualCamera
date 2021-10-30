@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Menu.unity
+    guid: 69eb5d1d426ce48bea7b1eb163ab8d27
+  - enabled: 1
+    path: Assets/Scenes/VirtualCamera.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/VirtualCameraWithGreenBackground.unity
+    guid: 088a3f3fac75946249354a67e42ef218
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e9d24e1838ac741b8a84607aaee7eeb0,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 1faa19bb5ae5b4e4ab8dacc40dab201b,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 23be2de720949421a9c7312fd60b33e6,
+      type: 2}
